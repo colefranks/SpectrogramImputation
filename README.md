@@ -3,12 +3,14 @@ Experimenting with improving tensorflow speech recognition tutorial using imputa
 
 ## Idea
 
-The tensorflow tutorial handles audio files of different length by padding with zeroes. This results in (log)spectrograms like the following: 
+The tensorflow tutorial handles audio files of different length by padding with zeroes. This results in (log)spectrograms like the one in the top-right corner:
 
 <img src = "unimputed.png"/>
 
 I was curious if a more sophisticated imputation could do better. I was also curious if taking the log of the magnitudes in the spectrogram, which appeared to result
-in more normally distributed entries, would improve performance. In the end, the inputation/log transform did not significantly change the results - simply training for longer made a much bigger difference. But imputing did result in much prettier pictures!
+in more normally distributed entries, would improve performance. I thought the having the zero padding would interfere with the normalization of the data.
+
+In the end, the inputation/log transform did not significantly change the results - simply training for longer made a much bigger difference. But imputing did result in much prettier pictures!
 
 ## Imputation method
 
@@ -20,4 +22,4 @@ They look like this:
 
 <img src = "Imputed.png"/>
 
-The ultimate accuracy of the model was 86%, but the same accuracy could be obtained without imputing.
+The ultimate accuracy of the model was 86%, but the same accuracy could be obtained without imputing. Perhaps imputing would make more of a difference if the data were more drastically different in length. On the other hand, the length of the data might in some cases be correlated with the label, in which case imputing could actually remove information!
