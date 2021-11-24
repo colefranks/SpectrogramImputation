@@ -8,7 +8,7 @@ The tensorflow tutorial handles audio files of different length by padding with 
 <img src = "unimputed.png"/>
 
 I was curious if a more sophisticated imputation could do better. I was also curious if taking the log of the magnitudes in the spectrogram, which appeared to result
-in more normally distributed entries, would improve performance. In the end, the inputation/log transform did not significantly change the results - simply training for longer made a much bigger difference. 
+in more normally distributed entries, would improve performance. In the end, the inputation/log transform did not significantly change the results - simply training for longer made a much bigger difference. But imputing did result in much prettier pictures!
 
 ## Imputation method
 
@@ -18,6 +18,6 @@ equal to the variance of the row scaled by some fudge factor that I visually tun
 
 They look like this: 
 
-<img src = "imputed.png"/>
+<img src = "Imputed.png"/>
 
 The ultimate accuracy of the model was 86%, but the same accuracy could be obtained without imputing.
