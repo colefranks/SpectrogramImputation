@@ -1,0 +1,15 @@
+exp
+*.pyc
+*__pycache__*
+*core.*
+*.jpg
+*.pkl
+*.txt
+data/
+*.json
+_ext
+tmp
+*.o*
+*~
+.DS_Store
+*.ipynb_checkpoints*
