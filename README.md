@@ -18,7 +18,7 @@ One visually observes that the "background" in the spectrogram has a consistent 
 row of the spectrogram. To imitate this, I simply replaced the missing entry in the (log) spectrogram with the mean across that row plus some white noise with variance
 equal to the variance of the row scaled by some fudge factor that I visually tuned. 
 
-They look like this: 
+They look like this; you can see that the image in the top right corner is much improved.
 
 <img src = "Imputed.png"/>
 
